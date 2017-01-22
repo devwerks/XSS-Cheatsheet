@@ -7,8 +7,13 @@ Here you will find:
  * A set of useful files for XSS testing
  
 Pull requests welcome
+
+## Recommendation
+
+ * Use Firefox
  
-## Contact:
+## Contact
+
 If you run into issues, feel free to get on touch on Twitter, check the current issues or create a new one. Patches are also welcome.
 
 http://devwerks.net 
