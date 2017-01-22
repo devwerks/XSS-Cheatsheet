@@ -4,5 +4,8 @@
 },
 { 
     "id" : "2", "data" : "<META HTTP-EQUIV='refresh' CONTENT='0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4='>"
+},
+{ 
+    "id" : "3", "data" : "<svg/onload=alert('XSS')>"
 }
 ]
