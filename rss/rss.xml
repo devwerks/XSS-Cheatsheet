@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen"?>
+<rss>
+<channel>
+	<title>devWerks XSS Cheatsheet for RSS</title>
+	<description><![CDATA[<svg onload=alert(/description/)>]]></description>
+	<language>en</language>
+	<generator><![CDATA[<s>000</s>javascript:alert(1)]]></generator>
+	<image>
+		<url>http://foo.com/?"onclick=prompt(1)/</url>
+		<title>XSS Vectors</title>
+		<link>data:x,%3cscript%3ealert(/link/)%3c/script%3e</link>
+	</image>
+        <item>
+            <title>javascript:prompt(/title/)</title>
+            <description><![CDATA[<svg onload=alert(/description/)>]]></description>
+            <link>data:x,%3cscript%3ealert(/link/)%3c/script%3e</link>
+            <comments>javascript:prompt(/comments/)</comments>
+            <pubDate><![CDATA[<iframe src=javascript:prompt(/pubdate/)>]]></pubDate>
+        </item>
+</channel>
+</rss>
+
