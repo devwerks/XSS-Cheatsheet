@@ -1,11 +1,26 @@
-[ 
+[
 { 
-    "id" : "1", "data" : "<img src=x onerror=alert('XSS')>" 
+    "id" : "1", 
+    "data" : "<script>alert('XSS')</script>" 
+}, 
+{ 
+    "id" : "2", 
+    "data" : "<img src=x onerror=alert('XSS')>" 
 },
 { 
-    "id" : "2", "data" : "<META HTTP-EQUIV='refresh' CONTENT='0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4='>"
+    "id" : "3", 
+    "data" : "<img src=x onerror=prompt(/xss/)>" 
 },
 { 
-    "id" : "3", "data" : "<svg/onload=alert('XSS')>"
+    "id" : "4", 
+    "data" : "<META HTTP-EQUIV='refresh' CONTENT='0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4='>"
+},
+{ 
+    "id" : "5", 
+    "data" : "<svg/onload=alert('XSS')>"
+},
+{ 
+    "id" : "6", 
+    "data" : "<iframe src='http://test.test'></iframe>"
 }
 ]

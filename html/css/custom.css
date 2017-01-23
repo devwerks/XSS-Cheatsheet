@@ -1,9 +1,13 @@
 body {
     background: #f5fbff;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 18px;
-    font-family: sans-serif;
-	overflow-x: hidden;
+    font-family: 'Ubuntu Mono', monospace, fixed, sans-serif;
+    overflow-x: hidden;
+}
+h1 {
+	padding: 10px;
+    color: #808080;	
 }
 #content {
     width: 70%;
@@ -14,4 +18,5 @@ code {
     padding: 20px;
     white-space: pre-line;
     border: 3px dotted #e1e1e1;
+    font-family: 'Ubuntu Mono', monospace, fixed, sans-serif;
 }
