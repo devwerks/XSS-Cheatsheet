@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Live HTML Editor</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    
+var editboxHTML ='<head>' +
+'<style type="text/css">' +
+'.expand { width: 100%; height: 100%; }' +
+'.close { border: none; margin: 0px; padding: 0px; }' +
+'html,body { overflow: hidden; }' +
+'<\/style>' +
+'<\/head>' +
+'<body class="expand close" onload="document.f.ta.focus();">' +
+'<form class="expand close" name="f">' +
+'<textarea class="expand close" style="background: #def;" name="ta" wrap="hard" spellcheck="false">' +
+'<\/textarea>' +
+'<\/form>' +
+'<\/body>';
+
+var old = '';
+         
+function init()
+{
+    window.editbox.document.write(editboxHTML);
+    window.editbox.document.close();
+    
+    $.ajax({ 
+        url: 'https://raw.githubusercontent.com/devwerks/XSS-Cheatsheet/master/vectors.json', 
+        dataType: 'json',
+        success: function (data) { 
+            $.each(data, function(index, element) {
+                if(element.id==location.hash.slice(1)) {
+                    window.editbox.document.f.ta.value = element.data;
+                }
+            });
+        }
+    });
+    
+    update();
+}
+
+function update()
+{
+    var textarea = window.editbox.document.f.ta;
+    var d = dynamicframe.document; 
+
+    if (old != textarea.value) {
+        old = textarea.value;
+        d.open();
+        d.write(old);
+        d.close();
+    }
+
+    window.setTimeout(update, 150);
+}
+
+</script>
+</head>
+
+<frameset resizable="yes" rows="30%,*" onload="init();">
+  <frame name="editbox" src="javascript:'';">
+  <frame name="dynamicframe" src="javascript:'';">
+</frameset>
+
+</html>
