@@ -1,0 +1,22 @@
+body {
+    background: #f5fbff;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: 'Ubuntu Mono', monospace, fixed, sans-serif;
+    overflow-x: hidden;
+}
+h1 {
+	padding: 10px;
+    color: #808080;	
+}
+#content {
+    width: 70%;
+}
+code {
+    display: block;
+    background: #fff;
+    padding: 20px;
+    white-space: pre-line;
+    border: 3px dotted #e1e1e1;
+    font-family: 'Ubuntu Mono', monospace, fixed, sans-serif;
+}
