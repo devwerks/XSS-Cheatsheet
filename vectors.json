@@ -22,5 +22,9 @@
 { 
     "id" : "6", 
     "data" : "<iframe src='http://test.test'></iframe>"
+},
+{ 
+    "id" : "7", 
+    "data" : "<marquee onstart=alert('XSS')>"
 }
 ]

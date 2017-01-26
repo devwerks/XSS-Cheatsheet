@@ -12,6 +12,12 @@ h1 {
 #content {
     width: 70%;
 }
+#sidebar {
+    width: 25%;
+    position: fixed;
+    right: 15px;
+    top: 78px;
+}
 code {
     display: block;
     background: #fff;

