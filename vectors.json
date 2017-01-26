@@ -29,6 +29,6 @@
 },
 { 
     "id" : "8", 
-    "data" : "<script src="http://test.test/xss.js"></script>"
+    "data" : "<script src='http://test.test/xss.js'></script>"
 }
 ]
