@@ -13,22 +13,30 @@
 },
 { 
     "id" : "4", 
-    "data" : "<META HTTP-EQUIV='refresh' CONTENT='0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4='>"
+    "data" : "<image src=x onerror=alert(/XSS/)>" 
 },
 { 
     "id" : "5", 
-    "data" : "<svg/onload=alert('XSS')>"
+    "data" : "<META HTTP-EQUIV='refresh' CONTENT='0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4='>"
 },
 { 
     "id" : "6", 
-    "data" : "<iframe src='http://test.test'></iframe>"
+    "data" : "<svg/onload=alert('XSS')>"
 },
 { 
     "id" : "7", 
-    "data" : "<marquee onstart=alert('XSS')>"
+    "data" : "<iframe src='http://test.test'></iframe>"
 },
 { 
     "id" : "8", 
+    "data" : "<marquee onstart=alert('XSS')>"
+},
+{ 
+    "id" : "9", 
     "data" : "<script src='http://test.test/xss.js'></script>"
+},
+{ 
+    "id" : "10", 
+    "data" : "<p onmouseover=alert('XSS')>long paragraph</p>"
 }
 ]
