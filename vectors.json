@@ -38,5 +38,13 @@
 { 
     "id" : "10", 
     "data" : "<p onmouseover=alert('XSS')>long paragraph</p>"
+},
+{ 
+    "id" : "11", 
+    "data" : "<details open ontoggle=alert('XSS')>"
+},
+{ 
+    "id" : "12", 
+    "data" : "<video><source onerror=alert('XSS')>"
 }
 ]

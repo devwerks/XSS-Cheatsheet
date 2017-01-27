@@ -8,3 +8,5 @@
 <marquee onstart=alert('XSS')>
 <script src='http://test.test/xss.js'></script>
 <p onmouseover=alert('XSS')>long paragraph</p>
+<details open ontoggle=alert('XSS')>
+<video><source onerror=alert('XSS')>
