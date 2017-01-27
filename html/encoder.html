@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encoder</title>
+    <script type="text/javascript" src="js/encoder.js"></script>
+    <script type="text/javascript" src="js/jsfuck.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <h1>XSS Encoder</h1>
+    <a href="https://github.com/devwerks/XSS-Cheatsheet/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+    <div id="content">
+    <form name="XSS">
+        <b>ASCII Text:</b>
+        <ul> 
+            <input name="ascii" size="50" type="text"><br><input value="Encode" onclick="encode()" type="button">
+            <input value="Clear" type="reset">
+        </ul>
+        <b>Hex Value:</b>
+        <ul> 
+            URL:<br>
+            <input name="hex" size="50" type="text"><br>
+            HTML:<br>
+            <input name="hexhtml" size="50" type="text">
+        </ul>
+        <b>Decimal Value:</b>
+        <ul> 
+            HTML:<br>
+            <input name="unicode" size="50" type="text"><br>
+        </ul>
+        <b>Base64 Value:</b>
+        <ul> 
+            Base64:<br>
+            <input name="base64" size="50" type="text"><br>
+        </ul>
+        <b><a href="http://www.jsfuck.com/">JSFuck.com</a>:</b>
+        <ul> 
+            JSFuck:<br>
+            <input name="jsfuck" size="50" type="text"><br>
+            <div class="checkbox">
+                <input id="eval" type="checkbox" checked />
+                <label for="eval">Eval Source</label>
+            </div>
+        </ul>
+    </form>
+    <center>
+    </center>
+    </div>
+</body>
+</html>
