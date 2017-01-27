@@ -38,3 +38,11 @@ code {
     border: 3px dotted #e1e1e1;
     font-family: 'Ubuntu Mono', monospace, fixed, sans-serif;
 }
+
+textarea {
+    display: block;
+    height: 200px;
+    width: 100%;
+    margin: 1em 0;
+    max-width: 600px;
+}
