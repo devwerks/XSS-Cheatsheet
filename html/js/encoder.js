@@ -1,39 +1,24 @@
 function $(id){
     return document.getElementById(id);
 }
-    
-function encode(){ 
-  if(document.XSS.ascii.value != ''){ 
-    var vText = document.XSS.ascii.value; 
-    document.XSS.hex.value = convertToHex(vText); 
-    document.XSS.hexhtml.value = convertToHexHTML(vText); 
-    var vEncoded = convertToUnicode(vText); 
-    document.XSS.unicode.value = vEncoded; 
-    document.XSS.ascii.focus();
-    document.XSS.ascii.blur();
-    document.XSS.ascii.select();
-    document.XSS.base64.value=encodeBase64(document.XSS.ascii.value);
-    document.XSS.jsfuck.value = JSFuck.encode(vText, $("eval").checked);
-  } 
-} 
 
 function convertToUnicode(source) { 
   result = ''; 
-  for (i=0; i<source.length; i++) 
+  for (var i=0; i<source.length; i++) 
     result += '&#' + source.charCodeAt(i); 
   return result; 
 } 
 
 function convertToHex(num) { 
   var hex = ''; 
-  for (i=0;i<num.length;i++) 
+  for (var i=0;i<num.length;i++) 
     hex += "%" + num.charCodeAt(i).toString(16).toUpperCase(); 
   return hex; 
 } 
 
 function convertToHexHTML(num) { 
   var hexhtml = ''; 
-  for (i=0;i<num.length;i++) 
+  for (var i=0;i<num.length;i++) 
     hexhtml += "&#x" + num.charCodeAt(i).toString(16).toUpperCase() + ";"; 
   return hexhtml; 
 } 
@@ -43,7 +28,7 @@ function convertToASCII() {
     var uniText = document.XSS.unicode.value;
     var testText = uniText.substring(2,uniText.length).split("&#")
     var resultString = ""
-    for (i=0;i<testText.length;i++)
+    for (var i=0;i<testText.length;i++)
       resultString += "%" + dec2hex(testText[i])
       document.XSS.ascii.value = unescape(resultString);
     }
@@ -167,3 +152,18 @@ function decodeBase64(str){
     }
     return result;
 }
+
+function encode(){ 
+  if(document.XSS.ascii.value != ''){ 
+    var vText = document.XSS.ascii.value; 
+    document.XSS.hex.value = convertToHex(vText); 
+    document.XSS.hexhtml.value = convertToHexHTML(vText); 
+    var vEncoded = convertToUnicode(vText); 
+    document.XSS.unicode.value = vEncoded; 
+    document.XSS.ascii.focus();
+    document.XSS.ascii.blur();
+    document.XSS.ascii.select();
+    document.XSS.base64.value=encodeBase64(document.XSS.ascii.value);
+    document.XSS.jsfuck.value = JSFuck.encode(vText, $("eval").checked);
+  } 
+} 
