@@ -5,19 +5,31 @@ body {
     font-family: 'Ubuntu Mono', monospace, fixed, sans-serif;
     overflow-x: hidden;
 }
+
 h1 {
 	padding: 10px;
     color: #808080;	
 }
+
+ul li {
+    list-style: none;
+}
+
 #content {
     width: 70%;
 }
+
+#content > ul {
+    padding: 0 0 0 10px;
+}
+
 #sidebar {
     width: 25%;
     position: fixed;
     right: 15px;
     top: 78px;
 }
+
 code {
     display: block;
     background: #fff;
