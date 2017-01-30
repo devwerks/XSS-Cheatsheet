@@ -26,8 +26,24 @@ ul li {
 #sidebar {
     width: 25%;
     position: fixed;
-    right: 15px;
+    right: 35px;
     top: 78px;
+}
+
+#sidebar a {
+    font-size: 15px;
+    color: #68c2ff;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+#sidebar a:hover {
+    color: #e1e1e1;    
+}
+
+#sidebar a:active {
+    color: #fff;	
 }
 
 code {
