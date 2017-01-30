@@ -7,7 +7,7 @@ Here you will find:
 
  * A collection of XSS attack vectors
  * A set of useful files for XSS testing
- * A Live Editor XSS testing
+ * A Live Editor for XSS testing
  * Encoder (Hex, Base64, JSFuck)
  
 Pull requests welcome
