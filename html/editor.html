@@ -38,6 +38,21 @@ function init()
         }
     });
     
+    $.ajax({ 
+        url: 'https://raw.githubusercontent.com/devwerks/XSS-Cheatsheet/master/events.json', 
+        dataType: 'json',
+        success: function (data) { 
+            var ret = location.hash.slice(1).replace('event','');
+            $.each(data, function(index, element) {
+                if(element.id==ret) {
+                    var1 = '<img src=x ' 
+                    var2 = '=alert("XSS")>'
+                    window.editbox.document.f.ta.value = var1 + element.data + var2;
+                }
+            });
+        }
+    });
+    
     update();
 }
 

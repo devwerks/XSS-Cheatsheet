@@ -7,7 +7,12 @@ body {
 }
 
 h1 {
-	padding: 10px;
+    padding: 10px;
+    color: #808080;	
+}
+
+h2 {
+    padding: 10px;
     color: #808080;	
 }
 
@@ -20,6 +25,14 @@ ul li {
 }
 
 #content > ul {
+    padding: 0 0 0 10px;
+}
+
+#events {
+    width: 70%;
+}
+
+#events > ul {
     padding: 0 0 0 10px;
 }
 
