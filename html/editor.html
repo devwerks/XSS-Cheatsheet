@@ -27,18 +27,6 @@ function init()
     window.editbox.document.close();
     
     $.ajax({ 
-        url: 'https://raw.githubusercontent.com/devwerks/XSS-Cheatsheet/master/vectors.json', 
-        dataType: 'json',
-        success: function (data) { 
-            $.each(data, function(index, element) {
-                if(element.id==location.hash.slice(1)) {
-                    window.editbox.document.f.ta.value = element.data;
-                }
-            });
-        }
-    });
-    
-    $.ajax({ 
         url: 'https://raw.githubusercontent.com/devwerks/XSS-Cheatsheet/master/events.json', 
         dataType: 'json',
         success: function (data) { 
@@ -48,6 +36,19 @@ function init()
                     var1 = '<img src=x ' 
                     var2 = '=alert("XSS")>'
                     window.editbox.document.f.ta.value = var1 + element.data + var2;
+                }
+            });
+        }
+    });
+    
+    
+    $.ajax({ 
+        url: 'https://raw.githubusercontent.com/devwerks/XSS-Cheatsheet/master/vectors.json', 
+        dataType: 'json',
+        success: function (data) { 
+            $.each(data, function(index, element) {
+                if(element.id==location.hash.slice(1)) {
+                    window.editbox.document.f.ta.value = element.data;
                 }
             });
         }
